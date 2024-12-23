@@ -1,0 +1,121 @@
+{%extends "sellerbase.html"%}
+{% block content %}
+<style>
+    .form
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="form">
+    <form action="/preandadd"   enctype="multipart/form-data" method="post">
+    <ul>
+        <li>
+            <h4>name</h4> 
+            <input  style="width: 500px;" type="text" name="name">
+        </li><br>
+        <li>
+            <h4>pincode</h4> 
+            <input  style="width: 500px;" type="text" name="pin">
+        </li><br>
+        <li>
+            <h4>address</h4> 
+            <input  style="width: 500px;" type="text" name="ad">
+        </li><br>
+        <li>
+            <h4>Phone Number</h4> 
+            <input  style="width: 500px;" type="text" name="phno">
+        </li><br>
+        <li>
+            <h4>price</h4> 
+            <input  style="width: 500px;" type="number" name="pr">
+        </li><br>
+        <li>
+            <h4>email</h4> 
+            <input  style="width: 500px;" type="text" name="em">
+        </li><br>
+        <li>
+
+
+            <h4>area(in sq feet)</h4> 
+            <input  style="width: 500px;"  type="text"  name="area">
+        </li><br>
+        <li>
+            <h4>No.of Bedrooms</h4> 
+            <input  style="width: 500px;"  type="text"  name="bd">
+        </li><br>
+        <li>
+            <h4>No.of BathRoom</h4> 
+            <input  style="width: 500px;"  type="text"  name="Bt">
+        </li><br>
+        <li>
+            <h4>stories</h4> 
+            <input  style="width: 500px;" type="text" name="st">
+        </li><br>
+        <li>
+            <h4>Main road</h4> 
+            <select  style="width: 500px;" name="mr" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>GuestRoom</h4> 
+            <select style="width: 500px;" name="gr" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>basement</h4> 
+            <select style="width: 500px;" name="bm" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>heat water </h4> 
+            <select  style="width: 500px;"name="hw" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>Air conditionar</h4> 
+            <select style="width: 500px;" name="ac" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>No.of Parking slot</h4> 
+            <input  style="width: 500px;" type="text"  name="ps">
+        </li><br>
+        <li>
+            <h4>prefarea</h4> 
+            <select style="width: 500px;"name="pf" id="">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>furshing status</h4> 
+            <select style="width: 500px;" name="fr" id="">
+                <option value="yes">furnished</option>
+                <option value="no">semi-furnished</option>
+                <option value="no">unfurnished</option>
+            </select>
+        </li><br>
+        <li>
+            <h4>Upload Image</h4>
+            <input type="file" name="file">
+        </li><br>
+
+        <button   type="submit"  style="align-items: center; justify-content: center;">add</button>
+    </ul>
+</form>
+</fieldset>
+</div>
+{% endblock %}

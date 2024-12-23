@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+      .container{
+          width: 500px;
+          margin: 0;
+          padding: 0;
+          padding-left: 10%;
+          
+
+      }
+      .uppercon{
+          display: flex;
+          padding-top: 3%;
+          padding-left: 2%;
+      }
+  </style>
+</head>
+<body>
+    {%extends "basetemp.html"%}
+    {% block content %}
+    <div class="uppercon">
+      <div class="imgfeild">
+      <img  style="height: 500px;   padding-left: 35%;  padding-top: 5.5%;  width: 600px;" src="{{ url_for('static', filename='img.jpg') }}" alt="">
+      </div>
+      <div class="container">
+        <form action="/logindb"  method="post">
+      <fieldset    style="height: 500px;  padding-left: 5%;  width: 500px; border-radius: 20px;  background-color: aqua "  class="border">
+          <legend   align="center"  style="align-items: center;   font-size: 40px;">Login</legend>
+          <ul>
+          <li><div class="name_field">
+              <fieldset  class="border p-2" style="width: 350px;">
+              
+                  <legend    style="font-size:larger;"  align="center" >User_Name</legend>
+                 &nbsp; &nbsp;&nbsp; <input    style="width: 300px; height: 30px; "     placeholder="Enter UserName" type="text" name="name">
+              </fieldset>
+              
+              
+          </div></li>
+
+
+          <br>
+          <br>
+          
+          <li><div class="Password_field">
+              <fieldset  class="border p-2" style="width: 350px;">
+                  <legend   style="font-size:larger;"  align="center" >Password</legend>
+                  &nbsp; &nbsp;&nbsp;<input style="width: 300px;  height: 30px; "   required placeholder="Enter The Password"  align="center" type="password" name="password">
+              </fieldset>
+              
+          </div></li>
+      </ul>
+      <br>
+      <div   style="padding-left: 8%;" class="submit_field">
+          <input  style=" border-radius: 15%; height: 40px;  width: 380px;"  required type="submit" value="Submit">
+      </div>
+      
+      <br>
+      <hr  style="background-color: black;">  
+
+      <div  class="signup" style="padding-left: 20%;">
+         <h5>Don't Have The Account ? <a href="/signup">Register</a></h5>
+      </div>
+      </fieldset>
+    </form>
+    </div>
+</div>
+</fieldset>
+    {% endblock %}
+    
+</body>
+</html>

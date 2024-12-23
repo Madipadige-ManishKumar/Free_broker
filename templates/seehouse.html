@@ -1,0 +1,22 @@
+{% include "sellerbase.html" %}
+{% for i in range(name|length) %}
+{%set fname=img[i][0]%}
+
+
+<div    class="card bg-dark text-white">
+    <img  style="height: 500px;  width: 1400px;  "   src="{{ url_for('static', filename=fname)}}"   class="card-img" alt="{{img[i][0]}}"> </a>
+  <div class="card-img-overlay">
+    {% if rem[i] %}
+    <h3><span  style="background-color: blue;"   class="badge badge-secondary">best seller</span></h3>
+{% endif %}
+    
+    <h4>Name:</h4><h5 class="card-title">{{name[i][0]}}</a></h5>
+    <h4>Pincode</h4><h5 class="card-text">{{pincode[i][0]}}</h5>
+    <h4>Address</h4><h5 class="card-text">{{address[i][0]}}</h5>
+    <a href="/house/{{id[i][0]}}"><button type="button" class="btn btn-outline-primary">More Details</button></a>
+  </div>
+</div>
+
+
+
+  {% endfor %}

@@ -1,0 +1,37 @@
+{%extends "sellerbase.html"%}
+{% block content %}
+
+
+{% for i in range(name|length) %}
+{%set fname=img[i]%}
+<div class="card mb-3">
+  <img  style="height: 500px;  width: 1400px;  "   src="{{ url_for('static', filename=fname)}}"   class="card-img" alt="{{img[i][0]}}"> </a>
+    <div class="card-body">
+      Name:<h5 class="card-title">{{name[i]}}</a></h5>      
+      Pincode:<h5 class="card-title">{{pincode[i]}}</h5>
+      address:  <h5>{{address[i]}}</h5>
+      Phone Number:  <h5>{{phno[i]}}</h5>
+      Price:  <h5>{{price[i]}}</h5>
+      email:  <h5>{{email[i]}}</h5>
+      area:  <h5>{{area[i]}}</h5>
+      No.of BedRooms:  <h5>{{bedrooms[i]}}</h5>
+      No.ofBathRooms:  <h5>{{bathroom[i]}}</h5>
+      Stories:  <h5>{{stories[i]}}</h5>
+      mainroad: <h5>{{mainroad[i]}}</h5>
+      guestroom: <h5>{{guestroom[i]}}</h5>
+      basement: <h5>{{basement[i]}}</h5>
+      Water Heater:  <h5>{{heatwater[i]}}</h5>
+      Air Condition :  <h5>{{aircondition[i]}}</h5>
+      No.of parking slot:  <h5>{{parkingslot[i]}}</h5>
+      PreArea:  <h5>{{prearea[i]}}</h5>
+      Furshing:  <h5>{{furshing[i]}}</h5>
+      Recommndation:  <h5>{{rem[i]}}</h5>
+
+    </div>
+  </div>
+  {% endfor %}
+
+  <div  style="padding-left: 50%; padding-right: 50%;">
+    <a  href="/myhouse"><button>back</button></a>
+</div>
+{% endblock %}

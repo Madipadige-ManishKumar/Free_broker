@@ -1,0 +1,29 @@
+{%extends "sellerbase.html"%}
+{% block content %}
+
+
+{% for i in range(name|length) %}
+{%set fname=img[i][0]%}
+
+
+<div    class="card bg-dark text-white">
+    <img  style="height: 500px;  width: 1400px;  "   src="{{ url_for('static', filename=fname)}}"   class="card-img" alt="{{img[i][0]}}"> </a>
+  <div class="card-img-overlay">
+    <h4>Name:</h4><h5 class="card-title">{{name[i][0]}}</a></h5>
+    <h4>Pincode</h4><h5 class="card-text">{{pincode[i][0]}}</h5>
+    <h4>Address</h4><h5 class="card-text">{{address[i][0]}}</h5>
+    <a href="/house/{{id[i][0]}}"><button type="button" class="btn btn-outline-primary">More Details</button></a>
+    <br>
+    <br>
+    <a href="/delete/{{id[i][0]}}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+  </div>
+</div>
+
+
+
+  {% endfor %}
+
+  <div  style="padding-left: 50%; padding-right: 50%;">
+    <a  href="/add"><button>Add</button></a>
+</div>
+{% endblock %}
